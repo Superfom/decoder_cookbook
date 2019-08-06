@@ -4,28 +4,50 @@
     <form action="{{ url_for('insert_task') }}" method="POST"  class="col s12">
         <div class="row">
             <div class="row">
+<!--Select Course originally labelled select category feature and still uses category db structure-->
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">poll</i>
+                    <i class="material-icons prefix">poll</i>s
                     <select id="category" name="category_name">
-                  <option value="" disabled selected>Choose Category</option>
+                  <option value="" disabled selected>Choose Course</option>
                   {% for cat in categories %}
                       <option value="{{cat.category_name}}">{{cat.category_name}}</option>
                   {% endfor %}
                 </select>
-                    <label>Task Category</label>
+                    <label>Select The Course Associated With This Query</label>
                 </div>
-            </div>
+<!--Select Module-->
+                 <div class="input-field col s12">
+                    <i class="material-icons prefix">poll</i>s
+                    <select id="module" name="module_name">
+                  <option value="" disabled selected>Choose Module</option>
+                  {% for mod in module %}
+                      <option value="{{mod.module_name}}">{{mod.module_name}}</option>
+                  {% endfor %}
+                </select>
+                    <label>Select The Module Associated With This Course You Selected Above</label>
+                </div>
+<!--Select Unit-->
+                 <div class="input-field col s12">
+                    <i class="material-icons prefix">poll</i>s
+                    <select id="unit" name="unit_name">
+                  <option value="" disabled selected>Choose Unit</option>
+                  {% for uni in units %}
+                      <option value="{{uni.unit_name}}">{{uni.unit_name}}</option>
+                  {% endfor %}
+                </select>
+                    <label>Select The Unit Associated With The Module You Selected Above</label>
+                </div>
             <div class="input-field col s12">
                 <i class="material-icons prefix">assignment</i>
                 <input id="task_name" name="task_name" type="text">
-                <label for="icon_prefix">Task Name</label>
+                <label for="icon_prefix">Add Subject</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">subject</i>
                 <textarea name="task_description" id="task_description" class="materialize-textarea"></textarea>
-                <label for="icon_telephone">Task Description</label>
+                <label for="icon_telephone">Ask Question</label>
             </div>
         </div>
         <div class="row">

@@ -5,17 +5,11 @@ from bson.objectid import ObjectId
 
 
 app = Flask(__name__)
-
-app.route('/')
-def hello():
-    return 'Hello World ...again'
-
 app.config["MONGO_DBNAME"] = 'task_manager'
-# app.config["MONGO_URI"] = os.getenv('MONGO_URI')
-#
-app.config["MONGO_URI"]="mongodb+srv://root:<Root123>@myfirstcluster-843eu.mongodb.net/test?retryWrites=true&w=majority"
+app.config["MONGO_URI"] = 'mongodb+srv://root:4Root123@myfirstcluster-843eu.mongodb.net/task_manager?retryWrites=true&w=majority'
 
 mongo = PyMongo(app)
+
 
 @app.route('/')
 @app.route('/get_tasks')
@@ -27,7 +21,7 @@ def get_tasks():
 @app.route('/add_task')
 def add_task():
     return render_template('addtask.html',
-                           categories=mongo.db.categories.find())
+                           categories=mongo.db.categories.find(), module=mongo.db.modules.find())
 
 
 @app.route('/insert_task', methods=['POST'])
@@ -48,10 +42,10 @@ def edit_task(task_id):
 @app.route('/update_task/<task_id>', methods=["POST"])
 def update_task(task_id):
     tasks = mongo.db.tasks
-    tasks.update( {'_id': ObjectId(task_id)},
+    tasks.update({'_id': ObjectId(task_id)},
     {
-        'task_name':request.form.get('task_name'),
-        'category_name':request.form.get('category_name'),
+        'task_name': request.form.get('task_name'),
+        'category_name': request.form.get('category_name'),
         'task_description': request.form.get('task_description'),
         'due_date': request.form.get('due_date'),
         'is_urgent':request.form.get('is_urgent')
@@ -69,7 +63,6 @@ def delete_task(task_id):
 def get_categories():
     return render_template('categories.html',
                            categories=mongo.db.categories.find())
-
 
 @app.route('/delete_category/<category_id>')
 def delete_category(category_id):
@@ -102,13 +95,86 @@ def insert_category():
 def add_category():
     return render_template('addcategory.html')
 
+
+# adding module routing below
+
+@app.route('/get_modules')
+def get_modules():
+    return render_template('modules.html',
+                           categories=mongo.db.modules.find())
+
+@app.route('/delete_module/<module_id>')
+def delete_module(module_id):
+    mongo.db.modules.remove({'_id': ObjectId(module_id)})
+    return redirect(url_for('get_modules'))
+
+
+@app.route('/edit_module/<module_id>')
+def edit_module(module_id):
+    return render_template('editmodule.html',
+    category=mongo.db.modules.find_one({'_id': ObjectId(module_id)}))
+
+
+@app.route('/update_module/<module_id>', methods=['POST'])
+def module_category(module_id):
+    mongo.db.modules.update(
+        {'_id': ObjectId(module_id)},
+        {'module_name': request.form.get('module_name')})
+    return redirect(url_for('get_modules'))
+
+
+@app.route('/insert_module', methods=['POST'])
+def insert_module():
+    module_doc = {'module_name': request.form.get('module_name')}
+    mongo.db.modules.insert_one(module_doc)
+    return redirect(url_for('get_modules'))
+
+
+@app.route('/add_module')
+def add_module():
+    return render_template('addmodule.html')
+
+
+# adding unit routing below
+
+@app.route('/get_units')
+def get_units():
+    return render_template('units.html',
+                           categories=mongo.db.units.find())
+
+@app.route('/delete_unit/<unit_id>')
+def delete_unit(unit_id):
+    mongo.db.units.remove({'_id': ObjectId(unit_id)})
+    return redirect(url_for('get_units'))
+
+
+@app.route('/edit_unit/<unit_id>')
+def edit_unit(unit_id):
+    return render_template('editunit.html',
+    category=mongo.db.units.find_one({'_id': ObjectId(unit_id)}))
+
+
+@app.route('/update_unit/<unit_id>', methods=['POST'])
+def update_unit(unit_id):
+    mongo.db.units.update(
+        {'_id': ObjectId(unit_id)},
+        {'unit_name': request.form.get('unit_name')})
+    return redirect(url_for('get_units'))
+
+
+@app.route('/insert_unit', methods=['POST'])
+def insert_unit():
+    unit_doc = {'unit_name': request.form.get('unit_name')}
+    mongo.db.units.insert_one(unit_doc)
+    return redirect(url_for('get_units'))
+
+
+@app.route('/add_unit')
+def add_unit():
+    return render_template('addunit.html')
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP', '127.0.0.1'),
             port=int(os.environ.get('PORT', '8080')),
             debug=True)
-
-
-# if __name__ == '__main__':
-#     app.run(host=os.environ.get('IP'),
-#             port=int(os.environ.get('PORT')),
-#             debug=True)
