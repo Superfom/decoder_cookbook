@@ -11,12 +11,18 @@
 
                 </div>
                 <div class=" task_header col s9">
-                    <strong>{{task.task_name}}</strong> - {{task.due_date}}
+                     {{task.category_name}} - {{task.module_name}} - {{task.unit_name}}
+                    <br>
+                     {{task.due_date}}
                 </div>
             </div>
             <div class="collapsible-body">
                 <span>
-                {{task.task_description}}
+                    <strong>Question: </strong>{{task.task_name}}
+                    <br>
+                <strong>Answer: </strong>{{task.task_description}}
+
+
             </span>
             </div>
         </li>

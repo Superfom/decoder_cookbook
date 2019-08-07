@@ -9,27 +9,51 @@
 
 <body>
     <header>
-        <nav>
-            <div class="nav-wrapper">
-                <a href="{{url_for('get_tasks')}}" class="brand-logo">Task Manager</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
+<!--Dropdown Structure-->
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="{{url_for('get_categories')}}">Manage Categories</a></li>
+            <li><a href="{{url_for('get_modules')}}">Manage Modules</a></li>
+            <li><a href="{{url_for('get_units')}}">Manage Units</a></li>
+        </ul>
+            <nav>
+              <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">Logo</a>
+                <ul class="right hide-on-med-and-down">
                     <li><a href="{{url_for('get_tasks')}}">Home</a></li>
                     <li><a href="{{url_for('add_task')}}">New Task</a></li>
-                    <li><a href="{{url_for('get_categories')}}">Manage Categories</a></li>
-                    <li><a href="{{url_for('get_modules')}}">Manage Modules</a></li>
-                    <li><a href="{{url_for('get_units')}}">Manage Units</a></li>
+                  <!-- Dropdown Trigger -->
+                  <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
                 </ul>
-                <ul class="side-nav" id="mobile-demo">
-                    <li><a href="{{url_for('get_tasks')}}">Home</a></li>
-                    <li><a href="{{url_for('add_task')}}">New Task</a></li>
-                    <li><a href="{{url_for('get_categories')}}">Manage Categories</a></li>
-                    <li><a href="{{url_for('get_modules')}}">Manage Modules</a></li>
-                    <li><a href="{{url_for('get_units')}}">Manage Units</a></li>
-
-                </ul>
-            </div>
-        </nav>
+              </div>
+            </nav>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="{{url_for('get_tasks')}}">Home</a></li>
+                <li><a href="{{url_for('add_task')}}">New Task</a></li>
+                <li><a href="{{url_for('get_categories')}}">Manage Categories</a></li>
+                <li><a href="{{url_for('get_modules')}}">Manage Modules</a></li>
+                <li><a href="{{url_for('get_units')}}">Manage Units</a></li>
+            </ul>
+        </div>
+    </nav>
+<!--        <nav>-->
+<!--            <div class="nav-wrapper">-->
+<!--                <a href="{{url_for('get_tasks')}}" class="brand-logo">DeCoder Cookbook</a>-->
+<!--                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>-->
+<!--                <ul id="nav-mobile" class="right hide-on-med-and-down">-->
+<!--                    <li><a href="{{url_for('add_task')}}">Ask Here</a></li>-->
+<!--                    <li><a href="{{url_for('get_categories')}}">Manage Courses</a></li>-->
+<!--                    <li><a href="{{url_for('get_modules')}}">Manage Modules</a></li>-->
+<!--                    <li><a href="{{url_for('get_units')}}">Manage Units</a></li>-->
+<!--                </ul>-->
+<!--                <ul class="side-nav" id="mobile-demo">-->
+<!--                    <li><a href="{{url_for('get_tasks')}}">Home</a></li>-->
+<!--                    <li><a href="{{url_for('add_task')}}">Ask Here</a></li>-->
+<!--                    <li><a href="{{url_for('get_categories')}}">Manage Courses</a></li>-->
+<!--                    <li><a href="{{url_for('get_modules')}}">Manage Modules</a></li>-->
+<!--                    <li><a href="{{url_for('get_units')}}">Manage Units</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </nav>-->
     </header>
     <div class="container">
         {% block content %} {% endblock %}
@@ -41,6 +65,7 @@
             $('.collapsible').collapsible();
             $('select').material_select();
             $(".button-collapse").sideNav();
+            $(".dropdown-trigger").dropdown({ hover: false});
         });
         $('.datepicker').pickadate({
             selectMonths: true, // Creates a dropdown to control month

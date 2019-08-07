@@ -21,7 +21,7 @@ def get_tasks():
 @app.route('/add_task')
 def add_task():
     return render_template('addtask.html',
-                           categories=mongo.db.categories.find(), module=mongo.db.modules.find())
+                           categories=mongo.db.categories.find(), module=mongo.db.modules.find(), unit=mongo.db.units.find())
 
 
 @app.route('/insert_task', methods=['POST'])
@@ -54,6 +54,7 @@ def update_task(task_id):
     })
     return redirect(url_for('get_tasks'))
 
+# Courses
 
 @app.route('/delete_task/<task_id>')
 def delete_task(task_id):
@@ -98,12 +99,12 @@ def add_category():
     return render_template('addcategory.html')
 
 
-# adding module routing below
+# Modules
 
 @app.route('/get_modules')
 def get_modules():
     return render_template('modules.html',
-                           categories=mongo.db.modules.find())
+                           modules=mongo.db.modules.find())
 
 @app.route('/delete_module/<module_id>')
 def delete_module(module_id):
@@ -114,7 +115,7 @@ def delete_module(module_id):
 @app.route('/edit_module/<module_id>')
 def edit_module(module_id):
     return render_template('editmodule.html',
-    category=mongo.db.modules.find_one({'_id': ObjectId(module_id)}))
+    module=mongo.db.modules.find_one({'_id': ObjectId(module_id)}))
 
 
 @app.route('/update_module/<module_id>', methods=['POST'])
@@ -137,12 +138,12 @@ def add_module():
     return render_template('addmodule.html')
 
 
-# adding unit routing below
+# units
 
 @app.route('/get_units')
 def get_units():
     return render_template('units.html',
-                           categories=mongo.db.units.find())
+                           units=mongo.db.units.find())
 
 @app.route('/delete_unit/<unit_id>')
 def delete_unit(unit_id):
@@ -153,7 +154,7 @@ def delete_unit(unit_id):
 @app.route('/edit_unit/<unit_id>')
 def edit_unit(unit_id):
     return render_template('editunit.html',
-    category=mongo.db.units.find_one({'_id': ObjectId(unit_id)}))
+    unit=mongo.db.units.find_one({'_id': ObjectId(unit_id)}))
 
 
 @app.route('/update_unit/<unit_id>', methods=['POST'])

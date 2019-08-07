@@ -1,12 +1,12 @@
 {% extends 'base.html' %} {% block content %}
-<h3>Add Task</h3>
+<h3>Add Question</h3>
 <div class="row">
     <form action="{{ url_for('insert_task') }}" method="POST"  class="col s12">
         <div class="row">
             <div class="row">
 <!--Select Course originally labelled select category feature and still uses category db structure-->
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">poll</i>s
+                    <i class="material-icons prefix">poll</i>
                     <select id="category" name="category_name">
                   <option value="" disabled selected>Choose Course</option>
                   {% for cat in categories %}
@@ -17,32 +17,34 @@
                 </div>
 <!--Select Module-->
                  <div class="input-field col s12">
-                    <i class="material-icons prefix">poll</i>s
+                    <i class="material-icons prefix">poll</i>
                     <select id="module" name="module_name">
                   <option value="" disabled selected>Choose Module</option>
-                  {% for mod in module %}
-                      <option value="{{mod.module_name}}">{{mod.module_name}}</option>
+                  {% for module in module %}
+                      <option value="{{module.module_name}}">{{module.module_name}}</option>
                   {% endfor %}
                 </select>
                     <label>Select The Module Associated With This Course You Selected Above</label>
                 </div>
 <!--Select Unit-->
                  <div class="input-field col s12">
-                    <i class="material-icons prefix">poll</i>s
+                    <i class="material-icons prefix">poll</i>
                     <select id="unit" name="unit_name">
                   <option value="" disabled selected>Choose Unit</option>
-                  {% for unit in units %}
+                  {% for unit in unit %}
                       <option value="{{unit.unit_name}}">{{unit.unit_name}}</option>
                   {% endfor %}
                 </select>
                     <label>Select The Unit Associated With The Module You Selected Above</label>
                 </div>
+<!--Add Subject-->
             <div class="input-field col s12">
                 <i class="material-icons prefix">assignment</i>
                 <input id="task_name" name="task_name" type="text">
                 <label for="icon_prefix">Add Subject</label>
             </div>
         </div>
+<!--Add Question-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">subject</i>
@@ -50,6 +52,7 @@
                 <label for="icon_telephone">Ask Question</label>
             </div>
         </div>
+<!--add due date-->
         <div class="row">
             <div class="input-field col s12" id="matfix">
                 <i class="material-icons prefix">today</i>

@@ -1,11 +1,14 @@
 {% extends 'base.html'%} {% block content %}
 <div class="row">
+
+    <h3>Units</h3>
+    <p>Units are the video lessons you toggle through in each module. At the end of some units there are additional challenges related to that unit. Be advised we do not name or track challenges in this app yet. This means if your question is related to a challenge simply select the unit name the challenge appears in.</p>
     <ul class="collapsible" data-collapsible="accordion">
         {% for unit in units %}
         <li>
             <div class="collapsible-header">
-                <a href="{{url_for('delete_module', module_id=module._id)}}" class="waves-effect waves-light btn btn_small">Del</a>
-                <a href="{{url_for('edit_module', module_id=module._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
+                <a href="{{url_for('delete_unit', unit_id=unit._id)}}" class="waves-effect waves-light btn btn_small">Del</a>
+                <a href="{{url_for('edit_unit', unit_id=unit._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
 
                 <div class="task_header">
                     <strong>{{unit.unit_name}}</strong>
