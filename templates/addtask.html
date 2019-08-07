@@ -31,8 +31,8 @@
                     <i class="material-icons prefix">poll</i>s
                     <select id="unit" name="unit_name">
                   <option value="" disabled selected>Choose Unit</option>
-                  {% for uni in units %}
-                      <option value="{{uni.unit_name}}">{{uni.unit_name}}</option>
+                  {% for unit in units %}
+                      <option value="{{unit.unit_name}}">{{unit.unit_name}}</option>
                   {% endfor %}
                 </select>
                     <label>Select The Unit Associated With The Module You Selected Above</label>

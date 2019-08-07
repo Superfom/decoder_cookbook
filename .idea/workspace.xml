@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d6e20a0-9c25-4059-8561-02dcc5b8ce65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/addmodule.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/addunit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/modules.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/units.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/editmodule.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/editunit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/addmodule.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/addmodule.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/addtask.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/addtask.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/addunit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/addunit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/units.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/units.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

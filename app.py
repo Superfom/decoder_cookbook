@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, redirect, request, url_for, request
+from flask import Flask, render_template, redirect, url_for, request
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
@@ -46,6 +46,8 @@ def update_task(task_id):
     {
         'task_name': request.form.get('task_name'),
         'category_name': request.form.get('category_name'),
+        'module_name': request.form.get('module_name'),
+        'unit_name': request.form.get('unit_name'),
         'task_description': request.form.get('task_description'),
         'due_date': request.form.get('due_date'),
         'is_urgent':request.form.get('is_urgent')
