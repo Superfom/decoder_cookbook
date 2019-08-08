@@ -10,6 +10,7 @@ app.config["MONGO_URI"] = 'mongodb+srv://root:4Root123@myfirstcluster-843eu.mong
 
 mongo = PyMongo(app)
 
+# Tasks
 
 @app.route('/')
 @app.route('/get_tasks')
@@ -35,8 +36,10 @@ def insert_task():
 def edit_task(task_id):
     the_task =  mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
     all_categories =  mongo.db.categories.find()
+    all_modules = mongo.db.modules.find()
+    all_units = mongo.db.units.find()
     return render_template('edittask.html', task=the_task,
-                           categories=all_categories)
+                           categories=all_categories, modules=all_modules, units=all_units)
 
 
 @app.route('/update_task/<task_id>', methods=["POST"])

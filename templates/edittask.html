@@ -19,6 +19,40 @@
                 <label>Task Category</label>
             </div>
         </div>
+    <form action="{{ url_for('update_task', task_id=task._id) }}" method="POST" class="col s12">
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">poll</i>
+                <select id="module" name="module_name">
+                  <option value="" disabled selected>Choose Module</option>
+                  {% for module in modules %}
+                      {% if module_name == task.module_name%}
+                      <option value="{{module.module_name}}" selected >{{module.module_name}}</option>
+                      {% else %}
+                       <option value="{{module.module_name}}">{{module.module_name}}</option>
+                    {% endif %}
+                  {% endfor %}
+                </select>
+                <label>Task Module</label>
+            </div>
+        </div>
+    <form action="{{ url_for('update_task', task_id=task._id) }}" method="POST" class="col s12">
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">poll</i>
+                <select id="unit" name="unit_name">
+                  <option value="" disabled selected>Choose unit</option>
+                  {% for unit in unit %}
+                      {% if unit_name == task.unit_name%}
+                      <option value="{{unit.unit_name}}" selected >{{unit.unit_name}}</option>
+                      {% else %}
+                       <option value="{{unit.unit_name}}">{{unit.unit_name}}</option>
+                    {% endif %}
+                  {% endfor %}
+                </select>
+                <label>Task Unit</label>
+            </div>
+        </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">assignment</i>

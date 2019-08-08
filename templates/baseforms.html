@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper grey darken-4">
+                <div class="container">
+                <a href="{{url_for('get_tasks')}}" class="brand-logo grey darken-4" ></i>coder cookbook</a>
+                <ul class="right hide-on-med-and-down grey darken-4">
+        <!--                        <li><a href="{{url_for('get_categories')}}"><i class="material-icons">view_stream</i></a></li>-->
+        <!--                        <li><a href="{{url_for('get_modules')}}"><i class="material-icons">view_list</i></a></li>-->
+        <!--                        <li><a href="{{url_for('get_units')}}"><i class="material-icons">view_module</i></a></li>-->
+                    <li><a href="{{url_for('get_tasks')}}">Home</a></li>
+                    <li><a href="{{url_for('add_task')}}">New Task</a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-activates="dropdown1"><i class="material-icons right">settings</i></a></li>
+                    <li><a href="#!"><i class="material-icons">search</i></a></li>
+                    <a class="btn tooltipped grey lighten-" data-position="bottom" data-tooltip="Helpful Hints">Recipes</a>
+                </ul>
+            </div>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="{{url_for('get_tasks')}}">Home</a></li>
+                <li><a href="{{url_for('add_task')}}">New Task</a></li>
+                <li><a href="{{url_for('get_categories')}}">Manage Courses</a></li>
+                <li><a href="{{url_for('get_modules')}}">Manage Modules</a></li>
+                <li><a href="{{url_for('get_units')}}">Manage Units</a></li>
+            </ul>
+        </nav>
+<!--Dropdown Structure-->
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="{{url_for('get_categories')}}"><i class="material-icons">view_stream</i>Manage Courses</a></li>
+            <li><a href="{{url_for('get_modules')}}"><i class="material-icons">view_list</i>Manage Modules</a></li>
+            <li><a href="{{url_for('get_units')}}"><i class="material-icons">view_module</i>Manage Units</a></li>
+        </ul>
+<!--            <nav>-->
+<!--                <div class="nav-wrapper grey darken-2">-->
+<!--                <a href="#!" class="brand-logo">The Coder CookBook</a>-->
+<!--                <ul class="right hide-on-med-and-down">-->
+<!--                    <li><a href="{{url_for('get_tasks')}}">Home</a></li>-->
+<!--                    <li><a href="{{url_for('add_task')}}">Ask Here</a></li>-->
+<!--                  &lt;!&ndash; Dropdown Trigger &ndash;&gt;-->
+<!--                  <li><a class="dropdown-trigger" href="#!" data-activates="dropdown1">Manager<i class="material-icons right">arrow_drop_down</i></a></li>-->
+<!--                </ul>-->
+<!--              </div>-->
+<!--            </nav>-->
+<!--            <ul class="side-nav" id="mobile-demo">-->
+<!--                <li><a href="{{url_for('get_tasks')}}">Home</a></li>-->
+<!--                <li><a href="{{url_for('add_task')}}">New Task</a></li>-->
+<!--                <li><a href="{{url_for('get_categories')}}">Manage Courses</a></li>-->
+<!--                <li><a href="{{url_for('get_modules')}}">Manage Modules</a></li>-->
+<!--                <li><a href="{{url_for('get_units')}}">Manage Units</a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </nav>-->
+
+<!--Standard navbar-->
+<!--This code was left here purposely and works if you remove comments and comment out the active navbar script-->
+<!--        <nav>-->
+<!--            <div class="nav-wrapper">-->
+<!--                <a href="{{url_for('get_tasks')}}" class="brand-logo">DeCoder Cookbook</a>-->
+<!--                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>-->
+<!--                <ul id="nav-mobile" class="right hide-on-med-and-down">-->
+<!--                    <li><a href="{{url_for('add_task')}}">Ask Here</a></li>-->
+<!--                    <li><a href="{{url_for('get_categories')}}">Manage Courses</a></li>-->
+<!--                    <li><a href="{{url_for('get_modules')}}">Manage Modules</a></li>-->
+<!--                    <li><a href="{{url_for('get_units')}}">Manage Units</a></li>-->
+<!--                </ul>-->
+<!--                <ul class="side-nav" id="mobile-demo">-->
+<!--                    <li><a href="{{url_for('get_tasks')}}">Home</a></li>-->
+<!--                    <li><a href="{{url_for('add_task')}}">Ask Here</a></li>-->
+<!--                    <li><a href="{{url_for('get_categories')}}">Manage Courses</a></li>-->
+<!--                    <li><a href="{{url_for('get_modules')}}">Manage Modules</a></li>-->
+<!--                    <li><a href="{{url_for('get_units')}}">Manage Units</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </nav>-->
+    </header>
+    <div class="container">
+        {% block content %} {% endblock %}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.collapsible').collapsible();
+            $('select').material_select();
+            $(".button-collapse").sideNav();
+            $(".dropdown-trigger").dropdown({ hover: false});
+        });
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15, // Creates a dropdown of 15 years to control year,
+            today: 'Today',
+            clear: 'Clear',
+            close: 'Ok',
+            closeOnSelect: false // Close upon selecting a date,
+        });
+        document.getElementById("matfix").addEventListener("click", function(e) {e.stopPropagation();
+        });
+    </script>
+    <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Bake Your Code Solutions Here</h5>
+                <p class="grey-text text-lighten-4">The solutions found in here are all provided by past or current students just like you. You're more than welcome to include their recipes in your code just pay it forward by adding your own. The hope is you'll share the recipes you used to solve any problems you encounter while navigating through the course. Good luck with your lessons, we look forward to coding with you.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Recipes</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Sound Advice</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">IDE Choices</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Frameworks</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Coding Languages</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Cloud Hosting</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        <footer class="page-footer">
+          <div class="footer-copyright grey darken-2">
+            <div class="container">
+            This cookbook was designed to help you navigate the 14 Week Fullstack Development Course offered by Code Institute | © 2019
+            <a class="grey-text text-lighten-4" href="#!"></a>
+            </div>
+          </div>
+        </footer>
+</body>
+</html>

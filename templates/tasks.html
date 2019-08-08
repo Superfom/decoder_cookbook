@@ -1,11 +1,15 @@
 {% extends 'base.html'%} {% block content %}
-<div class="row">
-    <ul class="collapsible" data-collapsible="accordion">
+
+<div class="row center">
+        <h3>Questions</h3>
+        <p>These are all open questions posted by students just like you. If you know the answer please post it by editing the question.</p>
+    </div>
+    <ul class="collapsible popout" data-collapsible="accordion">
         {% for task in tasks %}
         <li>
             <div class="collapsible-header">
                 <div class="col s3">
-                    <i class="material-icons">expand_more</i>
+
                     <a href="{{url_for('delete_task', task_id=task._id)}}" class="waves-effect waves-light btn btn_small">Done</a>
                     <a href="{{url_for('edit_task', task_id=task._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
 
@@ -21,8 +25,6 @@
                     <strong>Question: </strong>{{task.task_name}}
                     <br>
                 <strong>Answer: </strong>{{task.task_description}}
-
-
             </span>
             </div>
         </li>
