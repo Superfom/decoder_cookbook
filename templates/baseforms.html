@@ -12,7 +12,7 @@
         <nav>
             <div class="nav-wrapper grey darken-4">
                 <div class="container">
-                <a href="{{url_for('get_tasks')}}" class="brand-logo grey darken-4" ></i>coder cookbook</a>
+                <a href="{{url_for('get_index')}}" class="brand-logo grey darken-4" ></i>coder cookbook</a>
                 <ul class="right hide-on-med-and-down grey darken-4">
         <!--                        <li><a href="{{url_for('get_categories')}}"><i class="material-icons">view_stream</i></a></li>-->
         <!--                        <li><a href="{{url_for('get_modules')}}"><i class="material-icons">view_list</i></a></li>-->
@@ -86,12 +86,25 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <!--  Parallax Scripts-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>if (!window.jQuery) { document.write('<script src="bin/jquery-3.2.1.min.js"><\/script>'); }
+    </script>
+    <script src="docs/js/jquery.timeago.min.js"></script>
+    <script src="docs/js/prism.js"></script>
+    <script src="docs/js/lunr.min.js"></script>
+    <script src="docs/js/search.js"></script>
+    <script src="bin/materialize.js"></script>
+    <script src="docs/js/init.js"></script>
+     <!--  Parallax Scripts-->
     <script type="text/javascript">
         $(document).ready(function() {
             $('.collapsible').collapsible();
             $('select').material_select();
             $(".button-collapse").sideNav();
             $(".dropdown-trigger").dropdown({ hover: false});
+            $(document).ready(function(){
+                $('.parallax').parallax();
         });
         $('.datepicker').pickadate({
             selectMonths: true, // Creates a dropdown to control month
@@ -112,9 +125,9 @@
                 <p class="grey-text text-lighten-4">The solutions found in here are all provided by past or current students just like you. You're more than welcome to include their recipes in your code just pay it forward by adding your own. The hope is you'll share the recipes you used to solve any problems you encounter while navigating through the course. Good luck with your lessons, we look forward to coding with you.</p>
               </div>
               <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Recipes</h5>
+                <h5 class="white-text">Anecdotes</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Sound Advice</a></li>
+                  <li><a class="grey-text text-lighten-3" href="{{url_for('get_soundadvice')}}">Sound Advice</a></li>
                   <li><a class="grey-text text-lighten-3" href="#!">IDE Choices</a></li>
                   <li><a class="grey-text text-lighten-3" href="#!">Frameworks</a></li>
                   <li><a class="grey-text text-lighten-3" href="#!">Coding Languages</a></li>
@@ -126,7 +139,7 @@
         <footer class="page-footer">
           <div class="footer-copyright grey darken-2">
             <div class="container">
-            This cookbook was designed to help you navigate the 14 Week Fullstack Development Course offered by Code Institute | © 2019
+            Problem Solving Recipes for Code Institute's Fullstack Development Course | © 2019
             <a class="grey-text text-lighten-4" href="#!"></a>
             </div>
           </div>

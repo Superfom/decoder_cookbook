@@ -5,13 +5,17 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/javascript/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/javascript/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/addtask.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/addtask.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/baseforms.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/baseforms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/editmodule.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/editmodule.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/edittask.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edittask.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/editunit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/editunit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/modules.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/modules.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/soundadvice.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/soundadvice.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tasks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/units.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/units.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +33,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="Images" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -41,6 +45,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jmccl\PycharmProjects\decoder_cookbook\static\images" />
       <recent name="C:\Users\jmccl\PycharmProjects\decoder_cookbook\templates" />
     </key>
   </component>

@@ -16,7 +16,7 @@
                     {% endif %}
                   {% endfor %}
                 </select>
-                <label>Task Category</label>
+                <label>Select The Course Associated With This Query</label>
             </div>
         </div>
     <form action="{{ url_for('update_task', task_id=task._id) }}" method="POST" class="col s12">
@@ -33,7 +33,7 @@
                     {% endif %}
                   {% endfor %}
                 </select>
-                <label>Task Module</label>
+                <label>Select The Module Associated With The Course You Selected Above</label>
             </div>
         </div>
     <form action="{{ url_for('update_task', task_id=task._id) }}" method="POST" class="col s12">
@@ -50,28 +50,28 @@
                     {% endif %}
                   {% endfor %}
                 </select>
-                <label>Task Unit</label>
+                <label>Select The Unit Associated With The Module You Selected Above</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">assignment</i>
                 <input id="task_name" name="task_name" type="text" class="validate" value="{{task.task_name}}">
-                <label for="icon_prefix">Task Name</label>
+                <label for="icon_prefix">Ask Question Here, Ensure You Have Identified The Course, Module and Unit This Question Applies To</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">subject</i>
                 <textarea name="task_description" id="task_description" class="materialize-textarea">{{task.task_description}}</textarea>
-                <label for="icon_telephone">Task Description</label>
+                <label for="icon_telephone">Supply Recipe To Resolve Question Asked Above Here, Otherwise Leave Blank</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12" id="matfix">
                 <i class="material-icons prefix">today</i>
                 <input id="due_date" name="due_date" type="text" class="datepicker">
-                <label for="icon_prefix">Due Date</label>
+                <label for="icon_prefix">Select Due Date If Question Is Time Sensitive and Activate "Is Urgent" Switch, Otherwise Leave Blank</label>
             </div>
         </div>
         <div class="row">

@@ -19,3 +19,7 @@ flex-direction: column;
 main {
 flex: 1 0 auto;
 }
+
+.parallax-container {
+      height: 500px;
+    }

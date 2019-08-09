@@ -179,6 +179,16 @@ def insert_unit():
 def add_unit():
     return render_template('addunit.html')
 
+# sound advice static html page
+
+@app.route('/get_soundadvice')
+def get_soundadvice():
+    return render_template('soundadvice.html')
+
+@app.route('/get_index')
+def get_index():
+    return render_template('index.html')
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP', '127.0.0.1'),

@@ -3,7 +3,6 @@
 <div class="row">
     <form action="{{ url_for('insert_task') }}" method="POST"  class="col s12">
         <div class="row">
-            <div class="row">
 <!--Select Course originally labelled select category feature and still uses category db structure-->
                 <div class="input-field col s12">
                     <i class="material-icons prefix">poll</i>
@@ -24,7 +23,7 @@
                       <option value="{{module.module_name}}">{{module.module_name}}</option>
                   {% endfor %}
                 </select>
-                    <label>Select The Module Associated With This Course You Selected Above</label>
+                    <label>Select The Module Associated With The Course You Selected Above or Copy and Paste It Here</label>
                 </div>
 <!--Select Unit-->
                  <div class="input-field col s12">
@@ -35,13 +34,13 @@
                       <option value="{{unit.unit_name}}">{{unit.unit_name}}</option>
                   {% endfor %}
                 </select>
-                    <label>Select The Unit Associated With The Module You Selected Above</label>
+                    <label>Select The Unit Associated With The Module You Selected Above or Copy and Paste It Here</label>
                 </div>
 <!--Add Subject-->
             <div class="input-field col s12">
                 <i class="material-icons prefix">assignment</i>
                 <input id="task_name" name="task_name" type="text">
-                <label for="icon_prefix">Add Subject</label>
+                <label for="icon_prefix">Ask Question... Make Sure To Select The Course, Module and Unit From Picklists Above.</label>
             </div>
         </div>
 <!--Add Question-->
@@ -49,7 +48,7 @@
             <div class="input-field col s12">
                 <i class="material-icons prefix">subject</i>
                 <textarea name="task_description" id="task_description" class="materialize-textarea"></textarea>
-                <label for="icon_telephone">Ask Question</label>
+                <label for="icon_telephone">Supply Answer... If Including Code Snippets, Include Where It Is Placed</label>
             </div>
         </div>
 <!--add due date-->
@@ -57,7 +56,7 @@
             <div class="input-field col s12" id="matfix">
                 <i class="material-icons prefix">today</i>
                 <input id="due_date" name="due_date" type="text" class="datepicker">
-                <label for="icon_prefix">Due Date</label>
+                <label for="icon_prefix">Select Due Date... If Question Is Time Sensitive and Activate "Is Urgent" Switch Below, Otherwise Leave Blank</label>
             </div>
         </div>
         <div class="row">
