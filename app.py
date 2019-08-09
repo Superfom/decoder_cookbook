@@ -12,7 +12,6 @@ load_dotenv(dotenv_path=env_path)
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'task_manager'
 app.config["MONGO_URI"] = os.getenv("MONGO_URI")
-print(os.getenv("MONGO_URI"))
 
 mongo = PyMongo(app)
 
