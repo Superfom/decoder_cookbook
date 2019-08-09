@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d6e20a0-9c25-4059-8561-02dcc5b8ce65" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/images/parallax1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/parallax2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/academy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/javascript/scripts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/addtask.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/addtask.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/baseforms.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/baseforms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edittask.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edittask.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,6 +26,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
     <property name="settings.editor.selected.configurable" value="Images" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -38,7 +38,11 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jmccl\PycharmProjects\decoder_cookbook\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jmccl\PycharmProjects\decoder_cookbook\static" />
       <recent name="C:\Users\jmccl\PycharmProjects\decoder_cookbook\images" />
       <recent name="C:\Users\jmccl\PycharmProjects\decoder_cookbook" />
       <recent name="C:\Users\jmccl\PycharmProjects\decoder_cookbook\static\images" />
