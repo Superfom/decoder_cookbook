@@ -15,8 +15,8 @@ app.config["MONGO_URI"] = os.getenv("MONGO_URI")
 
 mongo = PyMongo(app)
 
-# Tasks
 
+# Tasks
 @app.route('/')
 @app.route('/get_tasks')
 def get_tasks():
@@ -106,7 +106,6 @@ def insert_category():
 def add_category():
     return render_template('addcategory.html')
 
-
 # Modules
 
 @app.route('/get_modules')
@@ -190,9 +189,10 @@ def add_unit():
 def get_soundadvice():
     return render_template('soundadvice.html')
 
+
 @app.route('/get_index')
 def get_index():
-    return render_template('index.html')
+    return render_template("index.html")
 
 
 if __name__ == '__main__':
