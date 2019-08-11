@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d6e20a0-9c25-4059-8561-02dcc5b8ce65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/images/coders_desk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/fullstack_dev.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/web_design.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/fullscreen_screenshot.PNG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/addtask.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/addtask.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/baseforms.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/baseforms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,16 +37,16 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\jmccl\PycharmProjects\decoder_cookbook\static\images" />
-      <recent name="C:\Users\jmccl\PycharmProjects\decoder_cookbook\images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jmccl\PycharmProjects\decoder_cookbook\static\images" />
       <recent name="C:\Users\jmccl\PycharmProjects\decoder_cookbook\static" />
       <recent name="C:\Users\jmccl\PycharmProjects\decoder_cookbook\images" />
       <recent name="C:\Users\jmccl\PycharmProjects\decoder_cookbook" />
       <recent name="C:\Users\jmccl\PycharmProjects\decoder_cookbook\templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jmccl\PycharmProjects\decoder_cookbook\static\images" />
+      <recent name="C:\Users\jmccl\PycharmProjects\decoder_cookbook\images" />
     </key>
   </component>
   <component name="RunDashboard">
