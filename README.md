@@ -10,11 +10,16 @@ solve the problem.
 
 Although the app allows anyone to edit questions and answers presently
 the idea is that the user who initially posted the question would
-ultimately provide the answer once it becomes known to him. This is to
+ultimately provide the answer once it becomes known to them. This is to
 circumvent long scrolling message board type scenarios often seen in
 apps such as Slack. It is assumed the user will use all sorts of apps
 and even enquiries with tutors while searching for solutions to the
 issue they are confronted with.
+
+Ultimately, the original person who
+posted the question should follow through by posting a detailed answer
+to the question that involves all of the necessary steps they took to
+resolve the problem the question posed.
 
 Simply put, the cookbook is simply a library of issues reported by
 students and the solutions they personally used to over come them.
@@ -35,7 +40,9 @@ The project is shared for use with the [GNU General Public License v3](https://g
 
 ## UX
 
-![Responsive Views of Home Page](static/images/fullscreen_screenshot.PNG)
+![Responsive Views of Home Page](static/images/responsive_screenshot_bundle.PNG)
+
+![Responsive Views of inner page](static/images/responsive_screenshot_inner_pages_bundle.PNG)
 
 ### Users 
 Expected users of the website include students enrolled in the Code
@@ -44,7 +51,7 @@ questions in need of answering.
 
 They are asked to pay it forward by leaving a recipe they used to solve
 an unrelated problem. This way over time the website will become a very
-valuable research resource for debugging issue encountered in their
+valuable research resource for debugging issues encountered in their
 coursework.
 
 ### User Stories
@@ -59,7 +66,8 @@ coursework.
    decide to post their own recipe for success.
 
 ### Design
-![Website Logo - Text Based]
+Website Logo - Text Based
+
 - Colour scheme consists exclusively through Materialize colour schema
   -  Navbar = grey darken-4:
      ![#212121](https://placehold.it/15/212121/000000?text=+) `#212121`
@@ -272,6 +280,13 @@ It may take a moment for changes to appear on the hosted website.
 
 During development the site is written in PyCharm. It is run using Live
 Server plugin for PyCharm.
+
+## Known Bugs
+
+- Site not responsive on smallest screens
+- Picklist on the add_task form is pulling data from Mongodb units
+  collection as it should be
+- Links in footer static except for Sound Advice
 
 
 ## Credits
